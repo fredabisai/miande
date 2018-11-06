@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand" href="#"><img src="./assets/images/miande.png"  alt="MIANDE SDA CHURCH"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link"  routerLink="/" ><b><span class="fa fa-home"></span>  Home <span class="sr-only">(current)</span></b></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" routerLink="/Kanisa">
+          <b>Kanisa</b>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link"  routerLink="/Mahali"><b>Mahali</b></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link"  routerLink="/Matangazo"><b>Matangazo</b></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link"  routerLink="/Mshiriki"><b>Mshiriki</b></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- End of navigation bar -->
+
+<!--- Contents  -->
+<ng-content></ng-content>
+
+<!-- Footer -->
+<footer class="home-footer container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="./assets/images/miande.png" alt="Miande" class="img-fluid">
+    </div>
+    <div class="col-md-8 footer-links">
+      <ul>
+        <li><a href="#" class="nav-link"><span class="fa fa-home"></span> <strong>Home</strong></a></li>
+        <li><a href="#" class="nav-link"> <strong>Kanisa</strong></a></li>
+        <li><a href="#" class="nav-link"> <strong>Mahali</strong></a></li>
+        <li><a href="#" class="nav-link"> <strong>Matangazo</strong></a></li>
+        <li><a href="#" class="nav-link"> <strong>Mshiriki</strong></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row copyright-text">
+    <p class="copyright-text"><b>Copyright &copy; 2018</b></p>
+  </div>
+</footer>
+

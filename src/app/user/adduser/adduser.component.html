@@ -1,0 +1,91 @@
+<app-userwrapper>
+
+
+        <div class="container">
+            <div class="offset-md-3 col-md-7">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <b>
+                            Register new user<br>
+                            <small>Authorised users only</small>
+                        </b>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="registerForm"  id="register-form" novalidate>
+                            <div class="form-group">
+                                <label>Firstname</label>
+                                <input type="text"  id="firstname" formControlName="firstname" placeholder="Firstname" class="form-control" autocomplete="off">
+                                <div  class="text-danger">
+                                    <p  class="text-danger" *ngIf="!registerForm.controls['firstname'].valid && registerForm.controls['firstname'].touched">
+                                        Firstname is required!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Lastname</label>
+                                <input type="text"  id="lastname" formControlName="lastname"  placeholder="Lastname" class="form-control" autocomplete="off">
+                                <div  class="text-danger">
+                                    <p  class="text-danger" *ngIf="!registerForm.controls['lastname'].valid && registerForm.controls['lastname'].touched">
+                                        Lastname is required!
+
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text"  id="email" formControlName="email"  placeholder="Email" class="form-control" autocomplete="off">
+                                <!--!registerForm.controls['email'].valid && registerForm.controls['email'].touched ||-->
+
+
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel"  id="phone_number" formControlName="phone_number"   placeholder="Phone number" class="form-control" autocomplete="off">
+
+                            </div>
+                            <div class="form-group">
+                                <label>Role</label>
+                                <select class="form-control"  id="role" formControlName="role">
+                                    <option value="">-----Chooose Role ------</option>
+                                    <option *ngFor="let role of roles" value="{{role.id}}" >{{ role.name }}</option>
+                                </select>
+                                <div  class="text-danger">
+                                    <p  class="text-danger" *ngIf="!registerForm.controls['role'].valid && registerForm.controls['role'].touched">
+                                       Role is required!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Positions</label>
+                                <select class="form-control" formControlName="position"  id="position">
+                                    <option value="">-----Chooose Position ------</option>
+                                    <option *ngFor="let position of positions" value="{{position.id}}">{{position.name}}</option>
+                                </select>
+                                <div  class="text-danger">
+                                    <p  class="text-danger" *ngIf="!registerForm.controls['position'].valid && registerForm.controls['position'].touched">
+                                        Position is required!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="signup-btn" [disabled]="!registerForm.valid"><strong>Sign up</strong></button>
+                                <button type="reset" class="btn btn-warning" id="reset-btn"><strong>Reset</strong></button>
+
+                            </div>
+                            <div class="form-group" >
+                                <p class="text-success"></p>
+                            </div>
+                        </form>
+
+                    </div>
+                </div><br>
+                <div class="text-center">
+                    <a routerLink="/users" class="btn btn-success"><i class="fa fa-arrow-left"></i> Back to user list</a>
+                </div>
+            </div>
+        </div>
+
+
+
+</app-userwrapper>

@@ -1,0 +1,52 @@
+.fa-exclamation-triangle{
+    color: red;
+}
+.card-image{
+    width: 300px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.imageBox{
+    position: relative;
+    overflow: hidden;
+}
+.imageBox img{
+    width: 100%;
+    transition: .5s;
+
+}
+.image-details{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(255,0,0,.9);*/
+    background: #18BC9C;
+    opacity: 0.95;
+    transition: .5s;
+}
+.image-details h3{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+
+    transform: translateX(-50%) translateY(-50%);
+
+}
+.imageBox:hover .image-details{
+    left: 0%;
+}
+.imageBox:hover img{
+    transform: scale(1.2);
+}
+@media screen and (width: 1000px) {
+    .card-image{
+        width: 100px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+}

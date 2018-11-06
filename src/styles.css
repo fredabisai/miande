@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+* CSS file for designs of all pages interfaces
+* It also contains bootstrap customizations
+*/
+/* Fonts customization */
+@font-face {
+    font-family: 'Poiret One', cursive;
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/PoiretOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/PT_Sans-Narrow-Web-Regular.ttf');
+}
+/* General customization */
+body{
+    /*padding-top: 90px;*/
+    height: 100%;
+}
+.container{
+    min-height: 100px !important;
+}
+no-padding{
+    padding: 0px;
+}
+no-margin{
+    margin: 0px;
+}
+/* Bootstrap customizations */
+/*1. Provides space between navbar links
+*/
+@media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+}
+/* Other customizations */
+/*1. Resize image for navbar brand*/
+.navbar-brand img{
+    width: 200px;
+    height: 60px;
+}
+.small-title{
+    font-family: 'Poiret One';
+}
+.title-line{
+    border: 1px solid black;
+}
+
+.calendar-text {
+    margin-top: .3em;
+    font-size: 15px;
+    font-family: 'Poiret One';
+    font-weight: bold;
+}
+.section-text{
+    font-family: 'Poiret One';
+    font-weight: bold;
+}
+.footer{
+    background: #0C2032;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+@media screen and (max-width: 750px) {
+    .footer {
+        position: relative;
+
+    }
+}
+.home-footer{
+    background: #0C2032;
+}
+.footer-links{
+    margin-top: 20px;
+}
+.footer-links li{
+    color: white;
+    display: inline-block;
+    font-family: 'Poiret One';
+}
+.copyright-text{
+    color: white;
+    margin: auto;
+}
+.about-text{
+    font-family: 'PT Sans Narrow';
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-heading-text{
+    font-family: 'Poiret One';
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.church-icons{
+    /*height: 100px;
+    margin: 10px;*/
+}
+
+
